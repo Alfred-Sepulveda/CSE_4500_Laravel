@@ -15,8 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-@extends('adminlte::page')
+    @extends('adminlte::page')
 
 @section('title', 'To Do List')
 
@@ -59,3 +58,4 @@ Route::get('/', function () {
     } );
 </script>
 @stop
+});
