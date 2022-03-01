@@ -25,3 +25,6 @@ Route::get('/calendar', function () {
 Route::get('/board', function () {
     return view('board');
 });
+Route::get('/', function () {
+    return view(('events-feed');    
+});
