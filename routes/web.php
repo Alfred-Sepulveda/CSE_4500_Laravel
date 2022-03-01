@@ -25,10 +25,8 @@ Route::get('/calendar', function () {
 Route::get('/board', function () {
     return view('board');
 });
+/*
 Route::get('/events-feed', function () {
-    return response()->json([
-        'title' => 'titel',
-        'start' => '',
-        'end'   => '',
-    ]);    
+    return view('events-feed')    
 });
+*/
