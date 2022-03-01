@@ -41,5 +41,5 @@ Meanwhile, you may <a href="/">return to dashboard</a> or try using the search f
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script> console.log('Hello!'); </script>
 @stop
