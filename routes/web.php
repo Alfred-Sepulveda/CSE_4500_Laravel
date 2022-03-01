@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-}),
-Route::get('/', function () {
+});
+Route::get('/todos', function () {
     return view('todos');
-}),
-Route::get('/', function () {
+});
+Route::get('/calendar', function () {
     return view('calendar');
-}),
-Route::get('/', function () {
+});
+Route::get('/board', function () {
     return view('board');
 });
