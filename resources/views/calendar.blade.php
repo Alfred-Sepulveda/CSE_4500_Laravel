@@ -28,14 +28,8 @@
 <script>
 $( document ).ready(function() {
     var calendar = new FullCalendar.Calendar($('#calendar')[0], {
-      events: {
-        url: '/events-feed.blade.php',
-        extraParams: function() {
-          return {
-            dynamic_values: Math.random()
-          };
-          }
-        }
+      initialView: 'dayGridMonth',
+      events: '/events-feed'
     });
     calendar.render();
 })
