@@ -27,7 +27,7 @@ Route::get('/board', function () {
 });
 Route::get('/events-feed', function () {
     return response()->json([
-        'title' => '',
+        'title' => 'titel',
         'start' => '',
         'end'   => '',
     ]);    
