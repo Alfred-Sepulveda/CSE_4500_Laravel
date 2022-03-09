@@ -46,4 +46,5 @@ Route::get('/db-migrate', function () {
 Route::resource('/todos', TodoController::class);
 
 Route::resource('/events', EventsController::class);
-//added fallback
+
+$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
