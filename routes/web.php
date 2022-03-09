@@ -31,4 +31,13 @@ Route::get('/events-feed', function () {
 Route::fallback(function (){
     return view('fallback');
 });
+Route::get('/db-test', function (){
+    try {
+        echo \DB::connection()->getDatabaseName();
+    } catch (\Exception $e) {
+        echo 'None';
+    }
+});
+
+
 //added fallback
