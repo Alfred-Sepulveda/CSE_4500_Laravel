@@ -47,4 +47,3 @@ Route::resource('/todos', TodoController::class);
 
 Route::resource('/events', EventsController::class);
 
-$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
