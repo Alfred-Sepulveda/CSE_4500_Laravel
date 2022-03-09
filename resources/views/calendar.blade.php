@@ -17,6 +17,7 @@
     </div>
   </div>
 </div>
+<a href="{{ route('events.create') }} " class="btn float-right btn-success" >New Event Entry</a>
 @stop
 
 @section('css')
