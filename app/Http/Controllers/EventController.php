@@ -17,7 +17,7 @@ class EventController extends Controller
 
     public function create()
     {
-        return view('calendar.create');
+        return view('events.create');
     }
 
 
