@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 
-class EventsController extends Controller
+class EventController extends Controller
 {
 
     public function index()
     {
-        $events = Events::select('title', 'start_at AS start', 'end_at AS end')->get();
+        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         return view('events', compact('events'));
     }
 
@@ -28,7 +28,7 @@ class EventsController extends Controller
             'start_at' => 'required',
             'end_at' => 'required',
         ]);
-        $events = Events::create([
+        $events = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
             'end_at' => $request->end_at,
@@ -40,8 +40,8 @@ class EventsController extends Controller
 
     public function show($id)
     {
-        $events= Events::find($id);
-        return view('Events.show',compact('events'));
+        $event= Event::find($id);
+        return view('Events.show',compact('event'));
     }
 
 
