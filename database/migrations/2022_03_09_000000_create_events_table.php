@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('events', function (Blueprint $table) {
-            $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
             $table->id();
             $table->string('title');
             $table->timestamp('start_at', $precision = 0);
