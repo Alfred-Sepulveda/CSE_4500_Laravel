@@ -31,10 +31,10 @@ class EventController extends Controller
         $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         $events = Event::create([
             'title' => $request->title,
-            'start_at' => $request->start,
-            'end_at' => $request->end,
+            'start' => $request->start_at,
+            'end' => $request->end_at,
         ]);
-        
+
         return $this->index();
 
     }
