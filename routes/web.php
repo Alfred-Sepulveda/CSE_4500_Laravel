@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
-use App\Http\Controllers\EventsController;
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,5 +45,5 @@ Route::get('/db-migrate', function () {
 });
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/events', EventsController::class);
+Route::resource('/events', EventController::class);
 
