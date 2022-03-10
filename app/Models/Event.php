@@ -11,6 +11,7 @@ class Event extends Model
     protected $dates = ['start_at',
                         'end_at'
                     ];
-    public $timestamps = false;  
+    const UPDATED_AT = false;
+    const CREATED_AT = false;
     //use HasFactory;
 }
