@@ -10,7 +10,7 @@ class EventsController extends Controller
 
     public function index()
     {
-        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        $events = Events::select('title', 'start_at AS start', 'end_at AS end')->get();
         return view('events', compact('events'));
     }
 
