@@ -11,13 +11,13 @@ class EventController extends Controller
     public function index()
     {
         //$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        return view('events', compact('events'));
+        //return view('events', compact('events'));
     }
 
 
     public function create()
     {
-        return view('events.create');
+        return view('calendar.create');
     }
 
 
@@ -43,7 +43,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event= Event::find($id);
-        return view('Events.show',compact('event'));
+        return view('calendar.show',compact('event'));
     }
 
 
