@@ -28,7 +28,7 @@ class EventController extends Controller
             'start_at' => 'required',
             'end_at' => 'required',
         ]);
-        $event = Event::select('title', 'start_at AS updated_at', 'end_at AS created_at')->get();
+        $event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         $event = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
