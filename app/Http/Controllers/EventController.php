@@ -34,6 +34,7 @@ class EventController extends Controller
             'start_at' => $request->start,
             'end_at' => $request->end,
         ]);
+        
         return $this->index();
 
     }

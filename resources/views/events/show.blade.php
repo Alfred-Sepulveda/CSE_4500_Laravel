@@ -8,6 +8,6 @@
 
 @section('content')
   <h2>{{ $event->title; }}</h2>
-  <div><p>{{ $event->start_at; }}% finished</p></div>
-  <div><p>{{ $event->end_at; }}% finished</p></div>
+  <div><p>{{ $event->start_at->format('d/m/Y'); }}% finished</p></div>
+  <div><p>{{ $event->end_at->format('d/m/Y'); }}% finished</p></div>
 @stop

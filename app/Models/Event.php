@@ -10,6 +10,6 @@ class Event extends Model
     protected $fillable = ['title'];
     protected $dates = ['start_at'];
     protected $dates = ['end_at'];
-    {{ $user->from_date->format('d/m/Y')}}
+
     use HasFactory;
 }
