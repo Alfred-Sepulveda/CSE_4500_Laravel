@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('calendar', function (Blueprint $table) {
+        Schema::create('event', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->timestamp('start_at', $precision = 0);
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('calendar');
+        Schema::dropIfExists('event');
     }
 };

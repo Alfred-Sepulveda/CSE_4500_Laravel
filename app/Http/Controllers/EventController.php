@@ -3,15 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Calendar;
+use App\Models\Event;
 
 class EventController extends Controller
 {
 
     public function index()
     {
-        $events = calendar::select('title', 'start_at AS start', 'end_at AS end')->get();
-        return view('calendar', compact('calendar'));
+        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return view('events', compact('events'));
     }
 
 
@@ -43,7 +43,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event= Event::find($id);
-        return view('calendar.show',compact('event'));
+        return view('events.show',compact('event'));
     }
 
 
