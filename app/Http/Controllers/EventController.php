@@ -10,7 +10,7 @@ class EventController extends Controller
 
     public function index()
     {
-        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        $event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         return view('events', compact('events'));
     }
 
@@ -28,8 +28,8 @@ class EventController extends Controller
             'start_at' => 'required',
             'end_at' => 'required',
         ]);
-        $events = Event::select('title', 'start_at AS updated_at', 'end_at AS created_at')->get();
-        $events = Event::create([
+        $event = Event::select('title', 'start_at AS updated_at', 'end_at AS created_at')->get();
+        $event = Event::create([
             'title' => $request->title,
             'start_at' => $request->start_at,
             'end_at' => $request->end_at,
@@ -42,7 +42,7 @@ class EventController extends Controller
 
     public function show($id)
     {
-        $event= Event::find($id);
+        $event = Event::find($id);
         return view('events.show',compact('event'));
     }
 
