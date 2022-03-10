@@ -29,7 +29,7 @@ class EventController extends Controller
             'end_at' => 'required',
         ]);
 
-        $event = Event::create([
+        $events = Event::create([
             'title' => $request->title,
             'start_at' => $request->date('start_at'),
             'end_at' => $request->date('end_at'),

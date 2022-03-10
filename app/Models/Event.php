@@ -7,9 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = ['title'];
-    protected $dateFormat = ['start_at',
-                                'end_at'];
+    protected $fillable = ['title','start_at','end_at'];
 
     //use HasFactory;
 }
