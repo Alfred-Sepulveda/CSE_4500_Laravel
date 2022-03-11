@@ -10,9 +10,9 @@ class EventController extends Controller
 
     public function index()
     {
-        $event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         //$event = Event::all();
-        return view('calendar',compact('events.show'));
+        //return view('calendar',compact('events.show'));
     }
 
 
@@ -36,7 +36,7 @@ class EventController extends Controller
             'end_at' => $request->date('end_at'),
         ]);
 
-        return $this->index();
+        return view('calendar');
 
     }
 
