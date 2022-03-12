@@ -9,7 +9,7 @@
 @stop
 
 @section('content')
-<a href="{{ route('event.create') }} " class="btn float-right btn-success" >New Event Entry</a>
+<a href="{{ route('event.create') }} " class="btn btn-success" >New Event Entry</a>
 <div class="row">
   <div class="col-md-12">
     <div class="card card-primary">
@@ -33,7 +33,7 @@
 $( document ).ready(function() {
     var calendar = new FullCalendar.Calendar($('#calendar')[0], {
       initialView: 'dayGridMonth',
-      events: '/events-feed'
+      events: '/event'
     });
     calendar.render();
 })
