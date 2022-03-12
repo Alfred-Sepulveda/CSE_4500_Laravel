@@ -12,7 +12,7 @@ class EventController extends Controller
     {
         //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         $events = Event::all();
-        return   view('calendar', compact('event'));
+        return   view('calendar.blade.php', compact('calendar.blade.php'));
         //$todos = Todo::all();
         //return view('todos', compact('todos'));
     }
