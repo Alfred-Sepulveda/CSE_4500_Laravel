@@ -29,9 +29,8 @@ Route::get('/board', function () {
 Route::get('/events-feed', function () {
     return view('events-feed');    
 });
-Route::fallback(function (){
-    return view('fallback');
-});
+
+
 Route::get('/db-test', function (){
     try {
         echo \DB::connection()->getDatabaseName();
@@ -45,5 +44,8 @@ Route::get('/db-migrate', function () {
 });
 Route::resource('/todos', TodoController::class);
 
-Route::resource('/calendar', EventController::class);
+Route::resource('/event', EventController::class);
 
+Route::fallback(function (){
+    return view('fallback');
+});

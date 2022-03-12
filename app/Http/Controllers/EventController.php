@@ -10,11 +10,8 @@ class EventController extends Controller
 
     public function index()
     {
-        //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        return   view('calendar', compact('events'));
-        //$todos = Todo::all();
-        //return view('todos', compact('todos'));
+        return json_encode( compact('events')['events'] );
     }
 
 
@@ -34,11 +31,11 @@ class EventController extends Controller
 
         $events = Event::create([
             'title' => $request->title,
-            'start_at' => $request->date('start_at'),
-            'end_at' => $request->date('end_at'),
+            'start_at' => date($request->start_at),
+            'end_at' => date($request->end_at),
         ]);
 
-        return $this->index();
+        return redirect('/calendar');
 
     }
 

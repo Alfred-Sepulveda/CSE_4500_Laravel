@@ -3,12 +3,13 @@
 @section('title', 'Calendar')
 
 @section('content_header')
-<a href="{{ route('calendar.create') }} " class="btn float-right btn-success" >New Event Entry</a>
+
     <h1>Calendar</h1>
 
 @stop
 
 @section('content')
+<a href="{{ route('event.create') }} " class="btn float-right btn-success" >New Event Entry</a>
 <div class="row">
   <div class="col-md-12">
     <div class="card card-primary">
