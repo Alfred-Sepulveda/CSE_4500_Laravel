@@ -12,7 +12,7 @@ class EventController extends Controller
     {
         //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         //$event = Event::all();
-        //return view('calendar',compact('events.show'));
+        return view('calendar');
     }
 
 
@@ -36,7 +36,7 @@ class EventController extends Controller
             'end_at' => $request->date('end_at'),
         ]);
 
-        return view('/calendar');
+        return $this->index();
 
     }
 
