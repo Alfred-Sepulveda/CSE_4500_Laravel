@@ -18,7 +18,7 @@ class EventController extends Controller
 
     public function create()
     {
-        return view('events.create');
+        return view('calendar.create');
     }
 
 
@@ -44,7 +44,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        return view('events.show',compact('event'));
+        return view('calendar.show',compact('event'));
     }
 
 
