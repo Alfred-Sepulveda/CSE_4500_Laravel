@@ -11,8 +11,8 @@ class EventController extends Controller
     public function index()
     {
         //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        //$events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
-        //return   view('calendar', compact('calendar'));
+        $events = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
+        return   view('calendar', compact('events'));
         //$todos = Todo::all();
         //return view('todos', compact('todos'));
     }
@@ -46,7 +46,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::find($id);
-        return view('calendar.show',compact('event'));
+        return view('calendar.show',compact('events'));
     }
 
 
