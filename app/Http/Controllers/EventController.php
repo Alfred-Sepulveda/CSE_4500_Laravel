@@ -12,7 +12,9 @@ class EventController extends Controller
     {
         //$event = Event::select('title', 'start_at AS start', 'end_at AS end')->get();
         //$event = Event::all();
-        return json_encode(compact('event')['calendar']);
+        return json_encode('calendar', compact('calendar'));
+        //$todos = Todo::all();
+        //return view('todos', compact('todos'));
     }
 
 
